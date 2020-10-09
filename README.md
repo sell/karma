@@ -14,6 +14,7 @@
     <h4>Examples (how to use)</h4>
     <img src="https://imgur.com/3TW7gjG" alt="image" />
     <br />
+    [Imgur](https://imgur.com/3TW7gjG)
     <img src="https://imgur.com/otrrw2H" alt="image" />
     <br />
     <a href="https://imgur.com/a/gxsJZhh">Click here if images are broke</a>
