@@ -18,14 +18,14 @@ const thanksChecker = async (message, callback) => {
 
     if (user && votedUser && parseInt(votedUser.collectedAt) + (cooldown  * 60 * 1000) > Date.now() ) return message.react('🕕')
 
-    await message.react('✅');
+    await message.react('👍');
     await message.react('❌');
-    const filter = (reaction, user) => ['✅', '❌'].includes(reaction.emoji.name) && user.id === message.author.id;
+    const filter = (reaction, user) => ['👍', '❌'].includes(reaction.emoji.name) && user.id === message.author.id;
 
-    message.awaitReactions(filter, {max: 1, time: 10000, errors: ['time']})
+    message.awaitReactions(filter, {max: 1, time: 1200000, errors: ['time']})
         .then(collected => {
             switch (collected.first().emoji.name) {
-                case '✅':
+                case '👍':
                     thankYouCollection(message, member);
                     message.reactions.resolve('❌').remove();
                     break;
