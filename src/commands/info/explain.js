@@ -3,6 +3,7 @@ const karmaCooldown = require('../../utils/models/commandsCooldown');
 
 module.exports = {
     name: 'explain',
+    description: 'Info on the bot',
     run: async (client, message, args) => {
 
         const guildCooldown = await karmaCooldown.findOne({ guildID: message.guild.id, commandName: 'cooldown'})
